@@ -1,0 +1,8 @@
+# Optional training environment; not needed by the app.
+-r requirements.txt
+torch>=2.2,<3
+transformers>=4.46,<5
+datasets>=3,<5
+peft>=0.13,<1
+trl>=0.12,<1
+accelerate>=1,<2

@@ -1,0 +1,144 @@
+{
+  "profile": {
+    "learning_goal": "understand responsible AI",
+    "current_level": "Intermediate",
+    "weak_topics": [
+      "SQL"
+    ],
+    "preferred_formats": [
+      "Interactive exercise",
+      "Practice quiz"
+    ],
+    "weekly_time_minutes": 360,
+    "free_only": false,
+    "requires_captions": false,
+    "exploration_level": 0.5,
+    "profile_id": "P001"
+  },
+  "popularity": [
+    {
+      "rank": 1,
+      "resource_id": "R0283",
+      "title": "Responsible AI Workshop 283",
+      "provider": "Compass Learning",
+      "match_score": 0.9112,
+      "responsible_score": 0.9112
+    },
+    {
+      "rank": 2,
+      "resource_id": "R0303",
+      "title": "Responsible AI Workshop 303",
+      "provider": "Atlas Learning",
+      "match_score": 0.8950500000000001,
+      "responsible_score": 0.8950500000000001
+    },
+    {
+      "rank": 3,
+      "resource_id": "R0062",
+      "title": "Python Applied Path 62",
+      "provider": "Willow Learning",
+      "match_score": 0.8911500000000001,
+      "responsible_score": 0.8911500000000001
+    },
+    {
+      "rank": 4,
+      "resource_id": "R0098",
+      "title": "Statistics Essentials 98",
+      "provider": "Willow Learning",
+      "match_score": 0.88965,
+      "responsible_score": 0.88965
+    },
+    {
+      "rank": 5,
+      "resource_id": "R0180",
+      "title": "Mathematics Applied Path 180",
+      "provider": "Atlas Learning",
+      "match_score": 0.88405,
+      "responsible_score": 0.88405
+    }
+  ],
+  "content": [
+    {
+      "rank": 1,
+      "resource_id": "R0254",
+      "title": "Responsible AI Workshop 254",
+      "provider": "Nova Learning",
+      "match_score": 0.5055449867163285,
+      "responsible_score": 0.5055449867163285
+    },
+    {
+      "rank": 2,
+      "resource_id": "R0193",
+      "title": "SQL Workshop 193",
+      "provider": "Forge Learning",
+      "match_score": 0.46829497544513077,
+      "responsible_score": 0.46829497544513077
+    },
+    {
+      "rank": 3,
+      "resource_id": "R0388",
+      "title": "Responsible AI Practice Lab 388",
+      "provider": "Pixel Learning",
+      "match_score": 0.44891334131846217,
+      "responsible_score": 0.44891334131846217
+    },
+    {
+      "rank": 4,
+      "resource_id": "R0571",
+      "title": "Mathematics Foundations 571",
+      "provider": "Nova Learning",
+      "match_score": 0.4286425661906492,
+      "responsible_score": 0.4286425661906492
+    },
+    {
+      "rank": 5,
+      "resource_id": "R0529",
+      "title": "Responsible AI Essentials 529",
+      "provider": "Sprout Learning",
+      "match_score": 0.42058367523464035,
+      "responsible_score": 0.42058367523464035
+    }
+  ],
+  "responsible": [
+    {
+      "rank": 1,
+      "resource_id": "R0193",
+      "title": "SQL Workshop 193",
+      "provider": "Forge Learning",
+      "match_score": 0.46829497544513077,
+      "responsible_score": 0.6745769852670784
+    },
+    {
+      "rank": 2,
+      "resource_id": "R0388",
+      "title": "Responsible AI Practice Lab 388",
+      "provider": "Pixel Learning",
+      "match_score": 0.44891334131846217,
+      "responsible_score": 0.6367276796520055
+    },
+    {
+      "rank": 3,
+      "resource_id": "R0577",
+      "title": "SQL Field Guide 577",
+      "provider": "Pixel Learning",
+      "match_score": 0.3908656883928329,
+      "responsible_score": 0.5926928202584846
+    },
+    {
+      "rank": 4,
+      "resource_id": "R0052",
+      "title": "SQL Applied Path 52",
+      "provider": "Summit Learning",
+      "match_score": 0.38902843451836755,
+      "responsible_score": 0.5634594275167054
+    },
+    {
+      "rank": 5,
+      "resource_id": "R0182",
+      "title": "Mathematics Concept Clinic 182",
+      "provider": "Cedar Learning",
+      "match_score": 0.34787659131785603,
+      "responsible_score": 0.5428982218309315
+    }
+  ]
+}

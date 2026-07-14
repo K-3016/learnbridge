@@ -1,6 +1,6 @@
 # LearnBridge: Responsible Learning Resource Recommender
 
-[![CI](https://github.com/OWNER/learnbridge/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/learnbridge/actions/workflows/ci.yml)
+[![CI](https://github.com/K-3016/learnbridge/actions/workflows/ci.yml/badge.svg)](https://github.com/K-3016/learnbridge/actions/workflows/ci.yml)
 
 LearnBridge is a deployment-ready educational recommendation prototype that balances relevance with knowledge-gap coverage, diversity, quality, accessibility, time, budget, and provider exposure. It serves cold-start learners from an onboarding profile—no interaction history, tracking, API key, or GPU is required.
 
@@ -130,7 +130,7 @@ Explanations are restricted to dataset metadata and must not invent certificates
 Python 3.10–3.12 is recommended.
 
 ```bash
-git clone https://github.com/OWNER/learnbridge.git
+git clone https://github.com/K-3016/learnbridge.git
 cd learnbridge
 python -m venv .venv
 source .venv/bin/activate
@@ -191,7 +191,7 @@ models/                    Generated TF-IDF and optional adapter artifacts
 
 ## GitHub workflow
 
-Create focused feature branches, open pull requests using the checklist, and require CI before merge. This is a solo project, so each PR includes a documented second-pass self-review; if independent approval is mandated, request an instructor, teaching assistant, or assigned peer because GitHub authors cannot approve their own PR. CI builds data/features and runs all tests on Python 3.10–3.12. Full instructions are in `CONTRIBUTING.md`. Replace the `OWNER` badge and clone placeholders after creating the public repository.
+Create focused feature branches, open pull requests using the checklist, and require CI before merge. This is a solo project, so each PR includes a documented second-pass self-review; if independent approval is mandated, request an instructor, teaching assistant, or assigned peer because GitHub authors cannot approve their own PR. CI builds data/features and runs all tests on Python 3.10–3.12. Full instructions are in `CONTRIBUTING.md`.
 
 ## Ethics, limitations, and future work
 
