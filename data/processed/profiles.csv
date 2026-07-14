@@ -1,0 +1,73 @@
+profile_id,learning_goal,current_level,weak_topics,preferred_formats,weekly_time_minutes,free_only,requires_captions,exploration_level
+P001,understand responsible AI,Intermediate,SQL,Interactive exercise|Practice quiz,360,False,False,0.5
+P002,improve SQL and data science skills,Advanced,Cloud computing,Interactive exercise|Tutorial,240,False,False,0.39
+P003,learn data analysis with Python,Intermediate,Data science,Article|Video,90,False,False,0.77
+P004,understand responsible AI,Intermediate,Cloud computing|SQL|Software engineering,Video|Project,240,True,False,0.84
+P005,write reliable software,Advanced,SQL|Data science,Video|Tutorial,360,False,False,0.09
+P006,create NLP applications,Advanced,Deep learning|Responsible AI|NLP,Practice quiz|Project,180,True,False,0.78
+P007,strengthen statistics and mathematics,Intermediate,Software engineering,Practice quiz|Article,360,False,False,0.55
+P008,learn computer vision and deep learning,Advanced,SQL,Interactive exercise|Practice quiz,180,True,False,0.6
+P009,understand responsible AI,Advanced,NLP,Video|Practice quiz,360,True,False,0.11
+P010,build practical machine learning systems,Beginner,Computer vision|Deep learning|Software engineering,Video|Project,60,True,True,0.77
+P011,learn computer vision and deep learning,Intermediate,Data science|Cloud computing,Project|Practice quiz,180,False,False,0.39
+P012,improve SQL and data science skills,Beginner,Python|Data science|Statistics,Practice quiz|Tutorial,180,True,False,0.91
+P013,build practical machine learning systems,Beginner,Computer vision|NLP,Tutorial|Article,90,False,False,0.67
+P014,prepare for cloud data projects,Beginner,Statistics|NLP,Course|Project,90,True,False,0.1
+P015,write reliable software,Advanced,Cloud computing,Project|Tutorial,60,False,False,0.13
+P016,build practical machine learning systems,Beginner,Machine learning|Statistics,Practice quiz|Article,60,False,False,0.38
+P017,understand responsible AI,Intermediate,Python,Video|Interactive exercise,120,True,True,0.58
+P018,build practical machine learning systems,Beginner,Statistics|Mathematics|Responsible AI,Interactive exercise|Course,360,False,False,0.79
+P019,understand responsible AI,Intermediate,Mathematics|NLP,Article|Video,360,True,False,0.15
+P020,learn computer vision and deep learning,Intermediate,Responsible AI|Deep learning|SQL,Interactive exercise|Practice quiz,240,False,False,0.43
+P021,learn data analysis with Python,Beginner,Cloud computing|Software engineering,Tutorial|Practice quiz,360,False,True,0.75
+P022,prepare for cloud data projects,Beginner,Data science|Responsible AI|Mathematics,Article|Tutorial,360,False,True,0.17
+P023,learn data analysis with Python,Intermediate,Computer vision|SQL,Course|Project,360,True,True,0.8
+P024,learn data analysis with Python,Intermediate,NLP|Mathematics,Practice quiz|Course,120,True,False,0.24
+P025,strengthen statistics and mathematics,Intermediate,Machine learning|NLP,Article|Tutorial,120,False,True,0.18
+P026,prepare for cloud data projects,Beginner,Machine learning,Article|Practice quiz,360,False,False,0.91
+P027,write reliable software,Beginner,Deep learning|Computer vision,Interactive exercise|Video,360,False,True,0.83
+P028,learn data analysis with Python,Beginner,Cloud computing|SQL,Tutorial|Practice quiz,240,True,False,0.44
+P029,write reliable software,Advanced,Cloud computing|Deep learning,Video|Project,360,False,False,0.08
+P030,prepare for cloud data projects,Intermediate,Responsible AI,Practice quiz|Video,360,False,False,0.15
+P031,build practical machine learning systems,Beginner,NLP,Interactive exercise|Project,60,True,False,0.32
+P032,create NLP applications,Beginner,Responsible AI,Interactive exercise|Video,180,False,True,0.7
+P033,prepare for cloud data projects,Advanced,Data science,Article|Project,60,False,True,0.11
+P034,write reliable software,Advanced,Python|Data science,Project|Practice quiz,360,True,False,0.61
+P035,create NLP applications,Intermediate,Responsible AI,Project|Tutorial,180,False,False,0.41
+P036,prepare for cloud data projects,Intermediate,Deep learning|NLP,Course|Practice quiz,180,False,False,0.82
+P037,understand responsible AI,Beginner,Python|Software engineering,Video|Course,60,False,True,0.63
+P038,write reliable software,Advanced,Mathematics|Responsible AI,Course|Article,180,False,True,0.31
+P039,learn data analysis with Python,Beginner,Computer vision,Video|Tutorial,240,True,True,0.43
+P040,write reliable software,Advanced,Data science|Statistics|Mathematics,Course|Tutorial,60,True,False,0.32
+P041,write reliable software,Beginner,Responsible AI|Computer vision,Course|Practice quiz,360,True,False,0.06
+P042,write reliable software,Intermediate,SQL|Mathematics,Video|Interactive exercise,180,True,True,0.64
+P043,learn data analysis with Python,Intermediate,SQL|NLP,Video|Practice quiz,90,False,False,0.36
+P044,learn computer vision and deep learning,Intermediate,SQL|Data science,Tutorial|Article,60,True,False,0.17
+P045,learn computer vision and deep learning,Advanced,Software engineering|SQL|Responsible AI,Course|Video,120,True,True,0.95
+P046,learn computer vision and deep learning,Advanced,Cloud computing|Deep learning|Mathematics,Interactive exercise|Practice quiz,180,False,False,0.04
+P047,prepare for cloud data projects,Advanced,Python|Machine learning|SQL,Interactive exercise|Tutorial,360,True,False,0.51
+P048,strengthen statistics and mathematics,Advanced,Software engineering|Python,Article|Tutorial,120,True,False,0.01
+P049,understand responsible AI,Beginner,Machine learning|Python|SQL,Course|Practice quiz,120,True,False,0.03
+P050,strengthen statistics and mathematics,Beginner,SQL,Tutorial|Course,240,False,False,0.09
+P051,understand responsible AI,Advanced,Cloud computing|Software engineering,Project|Practice quiz,120,False,True,0.62
+P052,learn data analysis with Python,Beginner,NLP|Data science|Deep learning,Article|Project,180,True,False,0.06
+P053,learn computer vision and deep learning,Advanced,Responsible AI,Practice quiz|Project,240,False,False,0.57
+P054,build practical machine learning systems,Beginner,NLP|Software engineering,Project|Article,90,False,False,0.73
+P055,build practical machine learning systems,Intermediate,Mathematics|Responsible AI,Interactive exercise|Project,240,True,True,0.55
+P056,prepare for cloud data projects,Intermediate,Computer vision|NLP|Statistics,Article|Course,60,True,False,0.88
+P057,build practical machine learning systems,Beginner,NLP|Data science|Computer vision,Interactive exercise|Project,90,True,False,0.85
+P058,build practical machine learning systems,Intermediate,Software engineering|NLP|Python,Course|Video,90,False,False,0.93
+P059,learn data analysis with Python,Advanced,Software engineering|Computer vision|NLP,Article|Video,120,False,False,0.78
+P060,improve SQL and data science skills,Advanced,Mathematics|Deep learning,Practice quiz|Project,120,False,False,0.09
+P061,improve SQL and data science skills,Intermediate,Statistics|NLP,Tutorial|Video,360,False,True,0.09
+P062,learn computer vision and deep learning,Beginner,Statistics|Computer vision,Practice quiz|Project,240,False,True,0.35
+P063,prepare for cloud data projects,Advanced,Machine learning|Python|Deep learning,Video|Tutorial,120,True,True,0.42
+P064,learn data analysis with Python,Intermediate,Cloud computing|Python,Project|Practice quiz,60,True,False,0.66
+P065,understand responsible AI,Intermediate,Responsible AI|Deep learning|SQL,Article|Interactive exercise,180,False,False,0.58
+P066,learn data analysis with Python,Intermediate,Cloud computing|Software engineering|Computer vision,Interactive exercise|Project,360,True,False,0.46
+P067,build practical machine learning systems,Advanced,Cloud computing|Software engineering,Article|Practice quiz,60,False,True,0.57
+P068,understand responsible AI,Advanced,Responsible AI,Video|Course,90,True,False,0.15
+P069,learn data analysis with Python,Beginner,Deep learning|Cloud computing|Statistics,Article|Tutorial,120,False,False,0.18
+P070,learn computer vision and deep learning,Intermediate,SQL|Responsible AI,Tutorial|Video,180,True,False,0.83
+P071,learn data analysis with Python,Advanced,SQL,Tutorial|Article,120,False,False,0.28
+P072,learn data analysis with Python,Beginner,Statistics|Python,Interactive exercise|Tutorial,240,False,True,0.26

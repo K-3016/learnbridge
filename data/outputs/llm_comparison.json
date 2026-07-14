@@ -1,0 +1,4 @@
+{
+  "computed": false,
+  "message": "No model outputs supplied. Train/run both models, then pass JSONL result files."
+}
