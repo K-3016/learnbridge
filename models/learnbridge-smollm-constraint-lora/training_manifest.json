@@ -1,0 +1,16 @@
+{
+  "base_model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "examples": 24,
+  "examples_per_label": 6,
+  "epochs": 2.0,
+  "labels": [
+    "ACCEPT",
+    "REJECT_BUDGET",
+    "REJECT_CAPTIONS",
+    "REJECT_LEVEL"
+  ],
+  "status": "complete",
+  "seed": 42,
+  "train_loss": 2.156106261536479,
+  "global_steps": 48
+}

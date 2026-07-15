@@ -93,37 +93,37 @@ Additional generated charts cover constraint satisfaction, catalog coverage, and
 
 The evaluator computes Precision@5, Recall@5, NDCG@5, mean relevance@5, intra-list/topic/format/provider diversity@5, catalog coverage, constraint satisfaction, knowledge-gap coverage, average popularity, long-tail exposure, and provider exposure distribution. It repeats the responsible system at MMR lambda values `1.0`, `0.9`, `0.7`, `0.5`, and `0.3`.
 
-## Optional LoRA adaptation and before/after comparison
+## Completed LoRA experiment and before/after comparison
 
-The language model never replaces retrieval. `scripts/finetune.py` builds synthetic instructions containing the learner profile, candidate metadata, constraints, correct ranking, grounded explanations, and explicit hard-constraint rejections. It defaults to `Qwen/Qwen2.5-0.5B-Instruct`, PEFT LoRA, Transformers, Datasets, and TRL.
+The language model does not retrieve resources or enforce production constraints. The completed experiment adapts `HuggingFaceTB/SmolLM2-135M-Instruct` with PEFT LoRA (`r=8`, `alpha=16`, targeting the query/value projections) to classify one controlled resource as `ACCEPT`, `REJECT_BUDGET`, `REJECT_CAPTIONS`, or `REJECT_LEVEL`. This narrower task was selected so that training could finish on a Mac and the learned behavior could be evaluated precisely.
 
-Validate the entire training-data path without downloading anything:
+The adapter was trained for two epochs on 24 balanced synthetic examples (six per label) and evaluated on 16 disjoint held-out examples (four per label). The run completed in 48 optimization steps with final training loss `2.1561`. These are measured results from `data/outputs/constraint_llm_comparison.json`, not expected values:
 
-```bash
-PYTHONPATH=src python scripts/finetune.py --dry-run
-```
+| Held-out metric | Base SmolLM2 | LoRA adapted |
+|---|---:|---:|
+| Overall accuracy | **25.00%** | 18.75% |
+| Macro F1 | 10.00% | **13.64%** |
+| Valid-label rate | **100.00%** | 43.75% |
+| Caption-violation accuracy | 0.00% | **75.00%** |
 
-For real training:
+The adapter learned a useful caption-rejection signal, but it did not improve the task overall: it over-predicted `REJECT_CAPTIONS`, failed to produce a valid label for nine examples, and reduced total accuracy. Its reported zero constraint false-negative rate must not be read as safety success because invalid answers were not counted as accepts. This failure mode is part of the result. LearnBridge therefore keeps deterministic budget, caption, and difficulty filters authoritative; the adapter is an evaluated research artifact, not part of deployed inference.
+
+Reproduce the compact training and held-out comparison:
 
 ```bash
 pip install -r requirements-train.txt
-PYTHONPATH=src python scripts/finetune.py \
-  --base-model Qwen/Qwen2.5-0.5B-Instruct \
-  --output-dir models/learnbridge-lora \
-  --epochs 1 --learning-rate 2e-4 --batch-size 1
+PYTHONPATH=src python scripts/finetune_constraint.py --dry-run
+PYTORCH_ENABLE_MPS_FALLBACK=1 PYTHONPATH=src python scripts/finetune_constraint.py \
+  --base-model HuggingFaceTB/SmolLM2-135M-Instruct \
+  --output-dir models/learnbridge-smollm-constraint-lora \
+  --examples-per-label 6 --epochs 2 --batch-size 1
+PYTORCH_ENABLE_MPS_FALLBACK=1 PYTHONPATH=src python scripts/evaluate_constraint_model.py \
+  --base-model HuggingFaceTB/SmolLM2-135M-Instruct \
+  --adapter-dir models/learnbridge-smollm-constraint-lora \
+  --train-examples-per-label 6 --eval-examples-per-label 4
 ```
 
-Only adapter and tokenizer files are saved. Base-model binaries and adapters are ignored by Git. The deployed app uses deterministic, metadata-only templates unless `LEARNBRIDGE_ENABLE_LLM=1` and an adapter directory exists.
-
-`scripts/evaluate_llm.py` compares real base and adapted JSONL outputs for constraint following, groundedness, ranking relevance, and unsupported-claim rate. Running it without both files creates an explicit `computed: false` result. No fine-tuning improvement is claimed in this repository because no actual training run was performed.
-
-```bash
-PYTHONPATH=src python scripts/evaluate_llm.py \
-  --base-results path/to/base.jsonl \
-  --adapted-results path/to/adapted.jsonl
-```
-
-Explanations are restricted to dataset metadata and must not invent certificates, instructor credentials, ratings, learning outcomes, accreditation, medical/employment/salary guarantees, or any unsupported claim.
+Only the LoRA adapter and tokenizer configuration are saved; base-model weights are never committed. The deployed application requires neither the adapter nor a GPU and continues to use deterministic metadata-only explanations.
 
 ## Quick start
 
@@ -146,14 +146,14 @@ PYTHONPATH=src python scripts/make_dataset.py
 PYTHONPATH=src python scripts/build_features.py
 PYTHONPATH=src python scripts/model.py
 PYTHONPATH=src python scripts/evaluate.py
-PYTHONPATH=src python scripts/finetune.py --dry-run
+PYTHONPATH=src python scripts/finetune_constraint.py --dry-run
 pytest -q
 streamlit run main.py
 ```
 
 `main.py` automatically builds deterministic data and TF-IDF artifacts when missing. If initialization fails, it shows the exact recovery command. Streamlit caching keeps resources and vectors warm.
 
-The trained artifact `models/tfidf_features.joblib` is committed so the application performs inference immediately after cloning. `make features` reproducibly retrains it. The optional LoRA adapter is not required for application inference.
+The trained artifact `models/tfidf_features.joblib` is committed so the application performs inference immediately after cloning. `make features` reproducibly retrains it. The evaluated LoRA adapter is not required for application inference.
 
 ## Deployment
 
@@ -182,10 +182,10 @@ docker run --rm -p 7860:7860 learnbridge
 main.py                    Streamlit UI
 src/learnbridge/           Package: retrieval, constraints, reranking, metrics, inference
 scripts/                   Data, feature, model, evaluation, LoRA, and pitch pipelines
-tests/                     20 deterministic unit/integration tests
+tests/                     23 deterministic unit/integration tests
 data/outputs/              Computed CSV, JSON, and PNG evaluation artifacts
 reports/                   Pitch outline, transcript, ethics and limitations
-models/                    Generated TF-IDF and optional adapter artifacts
+models/                    TF-IDF artifact and final evaluated LoRA adapter
 .github/workflows/ci.yml   Multi-version test workflow
 ```
 
@@ -201,7 +201,7 @@ Next steps are educator-reviewed judgments, real catalog ingestion, accessibilit
 
 ## Five-minute pitch
 
-Use `reports/pitch_outline.md`, the ready-to-deliver `reports/pitch_transcript.md`, the Streamlit comparison mode, generated figures, and `data/outputs/example_before_after.json`.
+Use `reports/pitch_outline.md`, the Streamlit comparison mode, generated figures, and `data/outputs/example_before_after.json`. Presentation files and speaker notes are maintained separately from the public repository.
 
 ## AI-use attribution
 

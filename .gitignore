@@ -5,7 +5,12 @@ __pycache__/
 venv/
 .env
 .DS_Store
+private_pitch/
+data/outputs/learnbridge_pitch.html
+reports/pitch_transcript.md
 models/learnbridge-lora/
+models/learnbridge-smollm-lora/
+models/learnbridge-smollm-compact-lora/
 models/*/checkpoints/
 data/raw/*.jsonl
 !**/.gitkeep
