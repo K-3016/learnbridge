@@ -1,0 +1,107 @@
+{
+  "computed": true,
+  "held_out_examples": 16,
+  "training_examples": 24,
+  "base_model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "adapter_dir": "models/learnbridge-smollm-constraint-lora",
+  "base": {
+    "accuracy": 0.25,
+    "macro_f1": 0.1,
+    "valid_label_rate": 1.0,
+    "constraint_false_negative_rate": 1.0,
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_labels": [
+      "ACCEPT",
+      "REJECT_BUDGET",
+      "REJECT_CAPTIONS",
+      "REJECT_LEVEL",
+      "INVALID"
+    ]
+  },
+  "adapted": {
+    "accuracy": 0.1875,
+    "macro_f1": 0.13636363636363635,
+    "valid_label_rate": 0.4375,
+    "constraint_false_negative_rate": 0.0,
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "confusion_labels": [
+      "ACCEPT",
+      "REJECT_BUDGET",
+      "REJECT_CAPTIONS",
+      "REJECT_LEVEL",
+      "INVALID"
+    ]
+  }
+}
